@@ -13,6 +13,19 @@
 
   &__bookshelf {
     padding: 20px;
+    &-title {
+      display: block;
+      text-align: center;
+      font-family: $montserratFont;
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      line-height: 1.2;
+      margin: 10px auto;
+    }
   }
+
+
 
 }

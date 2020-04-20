@@ -1,5 +1,6 @@
 $textColor: #333;
 $accentColor: #4264fd;
+$montserratFont: "Montserrat", sans-serif;
 
 %full-screen {
   position: absolute;
@@ -7,4 +8,11 @@ $accentColor: #4264fd;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+%absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

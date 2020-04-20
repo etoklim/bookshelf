@@ -1,7 +1,9 @@
 import React, { memo, useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import "react-input-range/lib/css/index.css";
+
 import InputRange from "react-input-range";
 
-import "react-input-range/lib/css/index.css";
 import "./RangeSlider.scss";
 
 function RangeSlider({ book, currentLocation, rendition }) {
@@ -10,9 +12,13 @@ function RangeSlider({ book, currentLocation, rendition }) {
   const [isDragging, setIsDragging] = useState(false);
 
   const generateLocations = async (locations) => {
-    // Generating array of chapters
-    const locationsGenerated = await locations.generate();
-    setLocations(locationsGenerated);
+    try {
+      // Generating array of chapters
+      const locationsGenerated = await locations.generate();
+      setLocations(locationsGenerated);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
@@ -24,9 +30,13 @@ function RangeSlider({ book, currentLocation, rendition }) {
   useEffect(() => {
     // Listening for location changes and updating slider position
     if (currentLocation && book && book.locations && locations && !isDragging) {
-      const currentPercent =
-        book.locations.percentageFromCfi(currentLocation) * 100;
-      setRangeValue(parseInt(currentPercent));
+      try {
+        const currentPercent =
+          book.locations.percentageFromCfi(currentLocation) * 100;
+        setRangeValue(parseInt(currentPercent));
+      } catch (err) {
+        console.log(err);
+      }
     }
   }, [currentLocation]);
 
@@ -41,8 +51,12 @@ function RangeSlider({ book, currentLocation, rendition }) {
   const onChangeComplete = (value) => {
     // Updating location on slider position change
     if (rendition && book && book.locations) {
-      const cfi = book.locations.cfiFromPercentage(rangeValue / 100);
-      rendition.display(cfi);
+      try {
+        const cfi = book.locations.cfiFromPercentage(rangeValue / 100);
+        rendition.display(cfi);
+      } catch (err) {
+        console.log(err);
+      }
     }
 
     // setTimeout to avoid jumping from slider position %
@@ -67,5 +81,11 @@ function RangeSlider({ book, currentLocation, rendition }) {
     </div>
   );
 }
+
+RangeSlider.propTypes = {
+  book: PropTypes.object,
+  currentLocation: PropTypes.string,
+  rendition: PropTypes.object,
+};
 
 export default memo(RangeSlider);

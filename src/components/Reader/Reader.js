@@ -1,14 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 import { EpubView } from "react-reader";
 
-import AliceBook from "../../assets/books/london_call/london_call.epub";
-import IconArrowLeft from "../Icons/IconArrowLeft";
-import { IconScrollHorizontal, IconScrollVertical } from "../Icons";
+import Header from "./Header";
 import RangeSlider from "../RangeSlider";
+
+import useFullscreenStatus from "../../hooks/useFullscreenStatus";
+
+import IconArrowLeft from "../Icons/IconArrowLeft";
 
 import "./Reader.scss";
 
-function Reader({ url }) {
+function Reader({ url, setCurrentBook }) {
   const [rendition, setRendition] = useState(null);
   const [book, setBook] = useState(null);
   const [currentLocation, setCurrentLocation] = useState(null);
@@ -17,21 +20,45 @@ function Reader({ url }) {
   const isPaginated = flow && flow === "paginated";
   const isBookReady = rendition && book && currentLocation;
 
+  const readerRef = useRef(null);
+  const [isFullscreen, setIsFullscreen] = useFullscreenStatus(readerRef);
+
   useEffect(() => {
-    if (rendition && rendition.book) {
-      setBook(rendition.book);
+    if (rendition) {
+      if (rendition.themes && rendition.themes.default) {
+        try {
+          // Overriding default theme to avoid red text in paragraphs on hover
+          rendition.themes.default({ "a[id]:hover": { color: "black" } });
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      if (rendition.book) {
+        setBook(rendition.book);
+      }
     }
   }, [rendition]);
 
-  const goNextPage = () => {
-    if (rendition) {
-      rendition.next();
-    }
-  };
+  useEffect(() => {
+    return () => {
+      setRendition(null);
+      setBook(null);
+    };
+  }, []);
 
-  const goPrevPage = () => {
-    if (rendition) {
-      rendition.prev();
+  const handlePageSwitch = (type) => {
+    try {
+      switch (type) {
+        case "prev":
+          return rendition.prev();
+        case "next":
+          return rendition.next();
+        default:
+          return rendition.next();
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -41,34 +68,29 @@ function Reader({ url }) {
 
   useEffect(() => {
     if (rendition && flow) {
-      rendition.flow(flow);
+      try {
+        // Toggling book flow (horizontal and paginated / vertical and scrolled)
+        rendition.flow(flow);
+      } catch (err) {
+        console.log(err);
+      }
     }
-  }, [flow]);
-
-  useEffect(() => {
-    if (rendition) {
-      // Overriding default theme to avoid red text in paragraphs on hover
-      rendition.themes.default({ "a[id]:hover": { color: "black" } });
-    }
-  }, [rendition]);
+  }, [rendition, flow]);
 
   return (
-    <section className="reader">
-      <header className="reader__header">
-        <nav className="reader__header-nav">
-          <div className="reader__header-left"></div>
-          <div className="reader__header-right">
-            <div className="reader__header-btn" onClick={toggleFlow}>
-              {isPaginated ? <IconScrollVertical /> : <IconScrollHorizontal />}
-            </div>
-          </div>
-        </nav>
-      </header>
+    <section className="reader" ref={readerRef}>
+      <Header
+        setCurrentBook={setCurrentBook}
+        isPaginated={isPaginated}
+        toggleFlow={toggleFlow}
+        isFullscreen={isFullscreen}
+        setIsFullscreen={setIsFullscreen}
+      />
       <main className="reader__main">
         {isPaginated && (
           <div
             className="reader__pagination reader__pagination--prev"
-            onClick={goPrevPage}
+            onClick={() => handlePageSwitch("prev")}
           >
             <IconArrowLeft />
           </div>
@@ -93,7 +115,7 @@ function Reader({ url }) {
         {isPaginated && (
           <div
             className="reader__pagination reader__pagination--next"
-            onClick={goNextPage}
+            onClick={() => handlePageSwitch("next")}
           >
             <IconArrowLeft />
           </div>
@@ -109,5 +131,10 @@ function Reader({ url }) {
     </section>
   );
 }
+
+Reader.propTypes = {
+  url: PropTypes.node,
+  setCurrentBook: PropTypes.func,
+};
 
 export default Reader;

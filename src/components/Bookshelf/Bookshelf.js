@@ -1,10 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Book from "../Book";
+import booksData from "./booksData";
 
 import "./Bookshelf.scss";
-
-import booksData from "./booksData";
 
 function Bookshelf({ setCurrentBook }) {
   return (
@@ -17,5 +17,9 @@ function Bookshelf({ setCurrentBook }) {
     </ul>
   );
 }
+
+Bookshelf.propTypes = {
+  setCurrentBook: PropTypes.func,
+};
 
 export default Bookshelf;

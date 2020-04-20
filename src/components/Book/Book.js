@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Book.scss";
 
 function Book({
@@ -37,5 +38,15 @@ function Book({
     </div>
   );
 }
+
+Book.propTypes = {
+  author: PropTypes.string,
+  title: PropTypes.string,
+  textColor: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  cover: PropTypes.node,
+  epub: PropTypes.node,
+  setCurrentBook: PropTypes.func,
+};
 
 export default Book;

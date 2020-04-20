@@ -1,0 +1,13 @@
+@import "../../vars";
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__bookshelf,
+  &__reader {
+    @extend %full-screen;
+  }
+
+}

@@ -112,6 +112,7 @@ function Reader({ url, setCurrentBook }) {
             locationChanged={(epubcifi) => setCurrentLocation(epubcifi)}
           />
         </div>
+
         {isPaginated && (
           <div
             className="reader__pagination reader__pagination--next"

@@ -19,14 +19,6 @@ import EmmaBook from "../../assets/books/austen_emma/austen_emma.epub";
 
 const booksData = [
   {
-    author: "Jane Austen",
-    title: "Pride and Prejudice",
-    textColor: "white",
-    backgroundColor: "#438bb3",
-    cover: PrideCover,
-    epub: PrideBook,
-  },
-  {
     author: "Lewis Carroll",
     title: "Alice's Adventures in Wonderland",
     textColor: "black",
@@ -43,14 +35,6 @@ const booksData = [
     epub: FrankensteinBook,
   },
   {
-    author: "Mark Twain",
-    title: "The Adventures of Tom Sawyer",
-    textColor: "white",
-    backgroundColor: "#021c29",
-    cover: SawyerCover,
-    epub: SawyerBook,
-  },
-  {
     author: "Jack London",
     title: "The Call of the Wild",
     textColor: "#c9110d",
@@ -65,6 +49,14 @@ const booksData = [
     backgroundColor: "#091a24",
     cover: TreasureCover,
     epub: TreasureBook,
+  },
+  {
+    author: "Mark Twain",
+    title: "The Adventures of Tom Sawyer",
+    textColor: "white",
+    backgroundColor: "#021c29",
+    cover: SawyerCover,
+    epub: SawyerBook,
   },
   {
     author: "Mark Twain",
@@ -89,6 +81,14 @@ const booksData = [
     backgroundColor: "#05836b",
     cover: EmmaCover,
     epub: EmmaBook,
+  },
+  {
+    author: "Jane Austen",
+    title: "Pride and Prejudice",
+    textColor: "white",
+    backgroundColor: "#438bb3",
+    cover: PrideCover,
+    epub: PrideBook,
   },
 ];
 

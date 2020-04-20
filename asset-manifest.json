@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.94a2e4bb.chunk.css",
+    "main.js": "/static/js/main.cc527b9f.chunk.js",
+    "main.js.map": "/static/js/main.cc527b9f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3ae18d49.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3ae18d49.js.map",
+    "static/css/2.b992083f.chunk.css": "/static/css/2.b992083f.chunk.css",
+    "static/js/2.380189ce.chunk.js": "/static/js/2.380189ce.chunk.js",
+    "static/js/2.380189ce.chunk.js.map": "/static/js/2.380189ce.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.27bc96a171fd5eed1f25095a7e7a9cc7.js": "/precache-manifest.27bc96a171fd5eed1f25095a7e7a9cc7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.b992083f.chunk.css.map": "/static/css/2.b992083f.chunk.css.map",
+    "static/css/main.94a2e4bb.chunk.css.map": "/static/css/main.94a2e4bb.chunk.css.map",
+    "static/js/2.380189ce.chunk.js.LICENSE.txt": "/static/js/2.380189ce.chunk.js.LICENSE.txt",
+    "static/media/austen_emma.jpg": "/static/media/austen_emma.9cc83a59.jpg",
+    "static/media/austen_emma.epub": "/static/media/austen_emma.ead0b433.epub",
+    "static/media/austen_pride.jpg": "/static/media/austen_pride.1c33207d.jpg",
+    "static/media/austen_pride.epub": "/static/media/austen_pride.5236d2c1.epub",
+    "static/media/carroll_alice.epub": "/static/media/carroll_alice.06613941.epub",
+    "static/media/carroll_alice.jpg": "/static/media/carroll_alice.af34d704.jpg",
+    "static/media/doyle_holmes.jpg": "/static/media/doyle_holmes.4746140d.jpg",
+    "static/media/doyle_holmes.epub": "/static/media/doyle_holmes.acdd94da.epub",
+    "static/media/london_call.jpg": "/static/media/london_call.6a8e5404.jpg",
+    "static/media/london_call.epub": "/static/media/london_call.c6c2fa8c.epub",
+    "static/media/shelley_frankenstein.jpg": "/static/media/shelley_frankenstein.1338075d.jpg",
+    "static/media/shelley_frankenstein.epub": "/static/media/shelley_frankenstein.d3d2fe32.epub",
+    "static/media/stevenson_treasure.jpg": "/static/media/stevenson_treasure.1e63b391.jpg",
+    "static/media/stevenson_treasure.epub": "/static/media/stevenson_treasure.fc9f9760.epub",
+    "static/media/twain_finn.jpeg": "/static/media/twain_finn.8bcd39f4.jpeg",
+    "static/media/twain_finn.epub": "/static/media/twain_finn.fb303800.epub",
+    "static/media/twain_sawyer.jpg": "/static/media/twain_sawyer.beb44754.jpg",
+    "static/media/twain_sawyer.epub": "/static/media/twain_sawyer.f558b108.epub"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ae18d49.js",
+    "static/css/2.b992083f.chunk.css",
+    "static/js/2.380189ce.chunk.js",
+    "static/css/main.94a2e4bb.chunk.css",
+    "static/js/main.cc527b9f.chunk.js"
+  ]
+}

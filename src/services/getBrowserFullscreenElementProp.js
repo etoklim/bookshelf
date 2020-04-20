@@ -7,8 +7,6 @@ const getBrowserFullscreenElementProp = () => {
     return "msFullscreenElement";
   } else if (typeof document.webkitFullscreenElement !== "undefined") {
     return "webkitFullscreenElement";
-  } else {
-    throw new Error("fullscreenElement is not supported by this browser");
   }
 };
 

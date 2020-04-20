@@ -34,9 +34,11 @@ function Header({
         </div>
       </div>
       <div className="header__right">
-        <div className="header__btn" onClick={toggleFullScreen}>
-          {isFullscreen ? <IconMinimize /> : <IconExpand />}
-        </div>
+        {isFullscreen !== null && (
+          <div className="header__btn" onClick={toggleFullScreen}>
+            {isFullscreen ? <IconMinimize /> : <IconExpand />}
+          </div>
+        )}
         <div className="header__btn" onClick={toggleFlow}>
           {isPaginated ? <IconScrollVertical /> : <IconScrollHorizontal />}
         </div>

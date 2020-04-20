@@ -1,4 +1,11 @@
-.app {
+@import "../../vars";
+
+.range-slider {
   width: 100%;
-  height: 100%;
+
+  .input-range__label--min,
+  .input-range__label--max {
+    display: none;
+  }
 }
+

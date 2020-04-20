@@ -1,16 +1,15 @@
 import React from "react";
 
-function IconClose() {
+function IconArrowLeft() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="512"
-      height="512"
-      viewBox="0 0 413.348 413.348"
+      viewBox="0 0 16 56"
+      className="icon-arrow-left"
     >
-      <path d="M413.348 24.354L388.994 0l-182.32 182.32L24.354 0 0 24.354l182.32 182.32L0 388.994l24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+      <path d="M2.111 28L15.864 4.5a.999.999 0 0 0-.361-1.365 1.005 1.005 0 0 0-1.369.359L.118 27.444A.98.98 0 0 0 .002 28a.98.98 0 0 0 .116.556l14.016 23.949a1 1 0 0 0 1.369.36.997.997 0 0 0 .361-1.365L2.111 28z" />
     </svg>
   );
 }
 
-export default IconClose;
+export default IconArrowLeft;

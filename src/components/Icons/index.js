@@ -1,5 +1,7 @@
 // All svg icons are described as components here
 
-import IconClose from "./IconClose";
+import IconArrowLeft from "./IconArrowLeft";
+import IconScrollHorizontal from "./IconScrollHorizontal";
+import IconScrollVertical from "./IconScrollVertical";
 
-export { IconClose };
+export { IconArrowLeft, IconScrollHorizontal, IconScrollVertical };

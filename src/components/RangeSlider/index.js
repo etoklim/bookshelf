@@ -1,2 +1,2 @@
-import App from "./App";
-export default App;
+import RangeSlider from "./RangeSlider";
+export default RangeSlider;

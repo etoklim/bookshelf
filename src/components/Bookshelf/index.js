@@ -1,2 +1,2 @@
-import App from "./App";
-export default App;
+import Bookshelf from "./Bookshelf";
+export default Bookshelf;

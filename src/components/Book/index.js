@@ -1,2 +1,2 @@
-import App from "./App";
-export default App;
+import Book from "./Book";
+export default Book;

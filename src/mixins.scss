@@ -1,85 +1,11 @@
 @mixin media-phone {
   @media (max-width: 767px) { @content; }
 }
+
 @mixin media-tablet {
   @media (max-width: 1024px) { @content; }
 }
+
 @mixin media-desktop {
   @media (min-width: 1025px) { @content; }
-}
-@mixin hover-desktop {
-  &:hover {
-    @media (hover: hover) and (pointer: fine) { @content; }
-  }
-}
-
-@mixin banner-with-shadow ($background-image) {
-  position: relative;
-  background: url($background-image) no-repeat center center;
-  background-size: cover;
-  * {
-    z-index: 1;
-  }
-  &:after {
-    background-color: rgba(0, 0, 0, .5);
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-  }
-}
-
-@mixin draw-star( $dimensions: 50px, $color: yellow ) {
-  //Fork of awesome LESS based mixin https://codepen.io/tiagojsalmeida/pen/mJzdOM/
-  $denominator: 1.3;
-  border-color: $color transparent transparent transparent;
-  border-style: solid;
-  border-top-width: $dimensions / $denominator;
-  border-right-width: $dimensions;
-  border-left-width: $dimensions;
-  height: 0;
-  margin-top: $dimensions / $denominator;
-  margin-bottom: $dimensions / ($denominator * 1.55555555);
-  position: relative;
-  width: 0;
-
-  &:before,
-  &:after {
-    border-color: $color transparent transparent transparent;
-    border-style: solid;
-    border-top-width: $dimensions / $denominator;
-    border-right-width: $dimensions;
-    border-left-width: $dimensions;
-    border-bottom: 0;
-    content: '';
-    display: block;
-    height: 0;
-    left: -$dimensions;
-    position: absolute;
-    top: -$dimensions / $denominator;
-    width: 0;
-  }
-
-  &:before {
-    transform: translate(15.5555555%, -15.5555555%) rotate(72deg) translateY(50%);
-  }
-
-  &:after {
-    transform: translate(-15.5555555%, -15.5555555%) rotate(-72deg) translateY(50%);
-  }
-}
-
-@mixin blur-background {
-  &:before {
-    top: 0;
-    left: 0;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: rgba(141, 107, 51, 0.3);
-    position: absolute;
-    filter: blur(10px);
-  }
 }

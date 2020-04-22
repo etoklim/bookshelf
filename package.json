@@ -1,9 +1,9 @@
 {
+  "homepage": "https://iamklim.github.io/bookshelf",
   "name": "epub-reader",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@gxl/epub-parser": "^2.0.2",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

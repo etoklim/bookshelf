@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/bookshelf/static/css/main.ad691205.chunk.css",
+    "main.js": "/bookshelf/static/js/main.5a4a8c4a.chunk.js",
+    "main.js.map": "/bookshelf/static/js/main.5a4a8c4a.chunk.js.map",
+    "runtime-main.js": "/bookshelf/static/js/runtime-main.91baa881.js",
+    "runtime-main.js.map": "/bookshelf/static/js/runtime-main.91baa881.js.map",
+    "static/css/2.b992083f.chunk.css": "/bookshelf/static/css/2.b992083f.chunk.css",
+    "static/js/2.5c3555eb.chunk.js": "/bookshelf/static/js/2.5c3555eb.chunk.js",
+    "static/js/2.5c3555eb.chunk.js.map": "/bookshelf/static/js/2.5c3555eb.chunk.js.map",
+    "index.html": "/bookshelf/index.html",
+    "precache-manifest.d7d2cca2f2764f8ae7293df1d7268d91.js": "/bookshelf/precache-manifest.d7d2cca2f2764f8ae7293df1d7268d91.js",
+    "service-worker.js": "/bookshelf/service-worker.js",
+    "static/css/2.b992083f.chunk.css.map": "/bookshelf/static/css/2.b992083f.chunk.css.map",
+    "static/css/main.ad691205.chunk.css.map": "/bookshelf/static/css/main.ad691205.chunk.css.map",
+    "static/js/2.5c3555eb.chunk.js.LICENSE.txt": "/bookshelf/static/js/2.5c3555eb.chunk.js.LICENSE.txt",
+    "static/media/austen_emma.jpg": "/bookshelf/static/media/austen_emma.9cc83a59.jpg",
+    "static/media/austen_emma.epub": "/bookshelf/static/media/austen_emma.ead0b433.epub",
+    "static/media/austen_pride.jpg": "/bookshelf/static/media/austen_pride.1c33207d.jpg",
+    "static/media/austen_pride.epub": "/bookshelf/static/media/austen_pride.5236d2c1.epub",
+    "static/media/carroll_alice.epub": "/bookshelf/static/media/carroll_alice.06613941.epub",
+    "static/media/carroll_alice.jpg": "/bookshelf/static/media/carroll_alice.af34d704.jpg",
+    "static/media/doyle_holmes.jpg": "/bookshelf/static/media/doyle_holmes.4746140d.jpg",
+    "static/media/doyle_holmes.epub": "/bookshelf/static/media/doyle_holmes.acdd94da.epub",
+    "static/media/london_call.jpg": "/bookshelf/static/media/london_call.6a8e5404.jpg",
+    "static/media/london_call.epub": "/bookshelf/static/media/london_call.c6c2fa8c.epub",
+    "static/media/shelley_frankenstein.jpg": "/bookshelf/static/media/shelley_frankenstein.1338075d.jpg",
+    "static/media/shelley_frankenstein.epub": "/bookshelf/static/media/shelley_frankenstein.d3d2fe32.epub",
+    "static/media/stevenson_treasure.jpg": "/bookshelf/static/media/stevenson_treasure.1e63b391.jpg",
+    "static/media/stevenson_treasure.epub": "/bookshelf/static/media/stevenson_treasure.fc9f9760.epub",
+    "static/media/twain_finn.jpeg": "/bookshelf/static/media/twain_finn.8bcd39f4.jpeg",
+    "static/media/twain_finn.epub": "/bookshelf/static/media/twain_finn.fb303800.epub",
+    "static/media/twain_sawyer.jpg": "/bookshelf/static/media/twain_sawyer.beb44754.jpg",
+    "static/media/twain_sawyer.epub": "/bookshelf/static/media/twain_sawyer.f558b108.epub"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91baa881.js",
+    "static/css/2.b992083f.chunk.css",
+    "static/js/2.5c3555eb.chunk.js",
+    "static/css/main.ad691205.chunk.css",
+    "static/js/main.5a4a8c4a.chunk.js"
+  ]
+}
